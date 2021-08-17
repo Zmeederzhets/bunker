@@ -1,0 +1,14 @@
+﻿@import "variables";
+@import "mixins";
+
+//base
+@import "base/global";
+
+//fonts
+@import "fonts/Gilroy/stylesheet.css";
+
+//block
+@import "block/_header";
+@import "block/_menu";
+@import "block/_logo";
+@import "block/_lang";

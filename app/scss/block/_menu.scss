@@ -1,0 +1,189 @@
+.menu {
+  width: 100%;
+
+  &__list {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    text-transform: uppercase;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.05);
+    @include min-width(md) {
+      width: unset;
+      position: unset;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 50px;
+      box-shadow: unset;
+    }
+
+    &--open {
+      display: block;
+      @include min-width(md) {
+        display: flex;
+      }
+    }
+
+  }
+
+  &__item {
+    margin: 12px 0;
+    font-weight: 700;
+    text-align: center;
+    font-size: 13px;
+    color: #565656;
+    @include min-width(md) {
+      position: relative;
+    }
+
+    &--burger {
+      @include min-width(md) {
+        display: none;
+      }
+    }
+
+    &--authorization {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-weight: 800;
+      color: #55B570;
+      @include min-width(md) {
+        position: relative;
+        height: 100%;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+        padding: 0 50px;
+
+        &:before {
+          position: absolute;
+          content: "";
+          width: 1px;
+          height: 100%;
+          left: 0;
+          background: #F4F4F4;
+        }
+      }
+    }
+
+    &--blue {
+      @include min-width(md) {
+        &:before {
+          position: absolute;
+          bottom: 43px;
+          content: "";
+          width: 100%;
+          height: 5px;
+          background: #2E9ADB;
+        }
+      }
+
+    }
+
+    &--green {
+      @include min-width(md) {
+        &:before {
+          position: absolute;
+          bottom: 43px;
+          content: "";
+          width: 100%;
+          height: 5px;
+          background: #55B570;
+        }
+      }
+
+    }
+
+  }
+
+
+  &__link {
+    position: relative;
+
+    &--decor {
+      display: none;
+      @include min-width(md) {
+        display: block;
+      }
+    }
+
+    &--img {
+      position: absolute;
+      left: -25px;
+
+    }
+  }
+
+  &__wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__button {
+    display: flex;
+    padding-right: 16px;
+    height: 100%;
+    align-items: center;
+    @include min-width(md) {
+      display: none;
+    }
+  }
+
+  &__burger {
+    position: relative;
+    width: 35px;
+    height: 4px;
+    background-color: #4EAAE0;
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      width: 35px;
+      height: 4px;
+      background-color: #4EAAE0;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 35px;
+      height: 4px;
+      background-color: #4EAAE0;
+    }
+  }
+
+  &__cross {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 35px;
+      height: 4px;
+      right: 0;
+      transform: rotate(-45deg);
+      background-color: #4EAAE0;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 35px;
+      height: 4px;
+      right: 0;
+      transform: rotate(45deg);
+      background-color: #4EAAE0;
+
+    }
+  }
+}
