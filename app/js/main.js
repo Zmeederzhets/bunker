@@ -1,17 +1,15 @@
 (() => {
     const langButton = document.querySelector('.lang__button');
-    let arr = langButton.getElementsByTagName('*')
+    const language = langButton.querySelectorAll('.lang__toggle')
 
     langButton.addEventListener('click', () => {
-        for (let i of arr) {
-            i.classList.toggle('lang__toggle--on' );
-        }
+        language.forEach(element => element.classList.toggle('lang__toggle--on' ))
     });
 })();
 
 (() => {
     const menuButton = document.querySelector('.menu__button');
-    let burgerOpen = menuButton.firstElementChild
+    const burgerOpen = menuButton.firstElementChild
     const menuList = document.querySelector('.menu__list');
 
     menuButton.addEventListener('click', () => {

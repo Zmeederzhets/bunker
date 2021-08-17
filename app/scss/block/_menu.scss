@@ -9,7 +9,7 @@
     left: 0;
     text-transform: uppercase;
     background: #FFFFFF;
-    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
     @include min-width(md) {
       width: unset;
       position: unset;
@@ -27,10 +27,10 @@
         display: flex;
       }
     }
-
   }
 
   &__item {
+    height: 100%;
     margin: 12px 0;
     font-weight: 700;
     text-align: center;
@@ -71,11 +71,20 @@
       }
     }
 
-    &--blue {
+  }
+
+  &__link {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--active {
       @include min-width(md) {
         &:before {
           position: absolute;
-          bottom: 43px;
+          top: 0;
           content: "";
           width: 100%;
           height: 5px;
@@ -85,26 +94,6 @@
 
     }
 
-    &--green {
-      @include min-width(md) {
-        &:before {
-          position: absolute;
-          bottom: 43px;
-          content: "";
-          width: 100%;
-          height: 5px;
-          background: #55B570;
-        }
-      }
-
-    }
-
-  }
-
-
-  &__link {
-    position: relative;
-
     &--decor {
       display: none;
       @include min-width(md) {
@@ -113,9 +102,7 @@
     }
 
     &--img {
-      position: absolute;
-      left: -25px;
-
+      padding-right: 10px;
     }
   }
 
@@ -128,7 +115,7 @@
 
   &__button {
     display: flex;
-    padding-right: 16px;
+    margin-right: 16px;
     height: 100%;
     align-items: center;
     @include min-width(md) {
@@ -165,6 +152,7 @@
 
   &__cross {
     position: relative;
+    width: 35px;
     &:before {
       content: "";
       position: absolute;

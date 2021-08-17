@@ -1,0 +1,59 @@
+.pride {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  z-index: 5;
+  @include min-width(md) {
+    margin-top: 100px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+
+  &__block {
+    &:nth-child(-n+2){
+      border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+      @include min-width(md){
+        border-bottom: 2px solid rgba(0, 0, 0, 0);      //прозрачная для однообразия
+      }
+    }
+    &:nth-child(odd) {
+      border-right: 2px solid rgba(255, 255, 255, 0.25);
+    }
+
+    @include min-width(md) {
+      border-right: 2px solid rgba(255, 255, 255, 0.25);
+      &:last-child {
+        border-right: 2px solid rgba(0, 0, 0, 0);     //прозрачная для того чтобы совпадали линия с PRIDE c линией NAVIGATE
+      }
+    }
+  }
+
+  &__subtitle {
+    padding-top: 20px;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 1.25em;
+    text-align: center;
+    color: #FFFFFF;
+    @include min-width(md) {
+      padding-top: 30px;
+      font-size: 40px;
+    }
+
+  }
+
+  &__tagline {
+    padding-bottom: 20px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.2em;
+    text-align: center;
+    color: #FFFFFF;
+    @include min-width(md) {
+      padding-bottom: 50px;
+      font-size: 16px;
+    }
+
+  }
+}

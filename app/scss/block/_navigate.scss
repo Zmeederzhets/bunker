@@ -1,0 +1,86 @@
+.navigate {
+  margin-bottom: 32px;
+  z-index: 5;
+  @include min-width(md){
+    margin-bottom: 80px;
+  }
+
+  &__wrap {
+    margin: 0 auto;
+    max-width: 288px ;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    @include min-width(md) {
+      max-width: initial;
+      flex-direction: row;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &:last-child {
+      border-top: 2px solid #F3F3F3;
+    }
+
+    @include min-width(md) {
+      border-right: 2px solid #F3F3F3;
+      border-top: initial;
+      &:last-child {
+        border-right: 2px solid rgba(0, 0, 0, 0); //прозрачная для того чтобы совпадали линия с PRIDE c линией NAVIGATE
+      }
+    }
+  }
+
+  &__text {
+    padding: 20px 16px 16px 16px;
+    font-size: 13px;
+    line-height: 1.5em;
+    text-align: center;
+    color: #000000;
+    @include min-width(md) {
+      padding: 58px 50px 32px 50px;
+      font-size: 16px;
+    }
+  }
+
+  &__link {
+    margin-bottom: 20px;
+    padding: 18px 0;
+    width: 256px;
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 1.5em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #2E9ADB;
+    box-shadow: 0 10px 20px rgba(78, 170, 224, 0.35);
+    border-radius: 40px;
+    cursor: pointer;
+    @include min-width(md) {
+      margin-bottom: 58px;
+      padding: 28px 0;
+      width: 354px;
+      font-size: 20px;
+    }
+
+    &--green {
+      background: #55B570;
+    }
+  }
+
+  &__img {
+    padding-left: 10px;
+    @include min-width(md) {
+      padding-left: 20px;
+    }
+  }
+}
