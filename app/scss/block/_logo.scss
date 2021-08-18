@@ -1,16 +1,24 @@
 .logo {
+  position: relative;
   display: flex;
   padding: 12px 0;
+  z-index: 10;
   @include min-width(md) {
     padding: 15px 0;
   }
 
-  &__img {
+  &__link {
     width: 78px;
     height: 36px;
     @include min-width(md) {
       width: 110px;
       height: 50px;
     }
+
+    &:hover {
+      background: radial-gradient(rgba(24, 161, 204, 0.1), #fff );
+      transition: background 1s ease-in-out;
+    }
+
   }
 }

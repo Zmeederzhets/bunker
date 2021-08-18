@@ -15,8 +15,7 @@
     menuButton.addEventListener('click', () => {
         let expanded = menuButton.getAttribute('aria-expanded') === 'true';
         menuButton.setAttribute('aria-expanded', !expanded);
-        burgerOpen.classList.toggle('menu__cross' );
-        burgerOpen.classList.toggle('menu__burger' );
+        burgerOpen.classList.toggle('menu__burger--cross' );
         menuList.classList.toggle('menu__list--open');
            });
 })();

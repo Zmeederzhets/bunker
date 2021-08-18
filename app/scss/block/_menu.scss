@@ -10,6 +10,7 @@
     text-transform: uppercase;
     background: #FFFFFF;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+
     @include min-width(md) {
       width: unset;
       position: unset;
@@ -23,6 +24,7 @@
 
     &--open {
       display: block;
+      z-index: 10;
       @include min-width(md) {
         display: flex;
       }
@@ -128,6 +130,7 @@
     width: 35px;
     height: 4px;
     background-color: #4EAAE0;
+    transition: background-color 0.5s;
 
     &:before {
       content: "";
@@ -137,6 +140,7 @@
       width: 35px;
       height: 4px;
       background-color: #4EAAE0;
+      transition: all 0.5s ease-in-out;
     }
 
     &:after {
@@ -147,31 +151,41 @@
       width: 35px;
       height: 4px;
       background-color: #4EAAE0;
+      transition: all 0.5s ease-in-out;
     }
+    &--cross {
+       position: relative;
+       width: 35px;
+       height: 4px;
+       visibility: hidden;
+       background-color: #fff;
+       transition: background-color 0.5s, visibility 0.5s;
+       &:before {
+         content: "";
+         position: absolute;
+         visibility: initial;
+         width: 35px;
+         height: 4px;
+         bottom: 0;
+         transform: rotate(-45deg);
+         background-color: #4EAAE0;
+         transition: all 0.5s ease-in-out;
+
+       }
+       &:after {
+         content: "";
+         position: absolute;
+         visibility: initial;
+         width: 35px;
+         height: 4px;
+         top: 0;
+         transform: rotate(45deg);
+         background-color: #4EAAE0;
+         transition: all 0.5s ease-in-out;
+
+       }
+     }
   }
 
-  &__cross {
-    position: relative;
-    width: 35px;
-    &:before {
-      content: "";
-      position: absolute;
-      width: 35px;
-      height: 4px;
-      right: 0;
-      transform: rotate(-45deg);
-      background-color: #4EAAE0;
-    }
 
-    &:after {
-      content: "";
-      position: absolute;
-      width: 35px;
-      height: 4px;
-      right: 0;
-      transform: rotate(45deg);
-      background-color: #4EAAE0;
-
-    }
-  }
 }

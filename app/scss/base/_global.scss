@@ -9,11 +9,13 @@
 a{
   text-decoration: none;
   color: unset;
+  cursor: pointer;
   &:hover{
     text-shadow:  0 0 30px;
+    transition:text-shadow 0.5s;
   }
 }
-h1{
+h1, h2{
   margin: 0;
   font-style: normal;
 }

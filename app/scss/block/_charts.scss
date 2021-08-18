@@ -1,0 +1,102 @@
+.charts {
+  margin: 4px 0 4px;
+  position: relative;
+  background-image: url("/img/charts/charts.jpg");
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+  &:before {
+    content: "";
+    position: absolute;
+    height: 60px;
+    right: 0;
+    top: -2px;
+    left: 0;
+    background-image: url("/img/charts/charts_up_mob.svg");
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include  min-width(xs){
+      background-image: url("/img/charts/charts_up.svg");
+    }
+    @include min-width(md) {
+            height: 140px;
+    }
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    height: 60px;
+    right: 0;
+    bottom: -2px;
+    left: 0;
+    background-image: url("/img/charts/charts_down_mob.svg");
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include  min-width(xs){
+      background-image: url("/img/charts/charts_down.svg");
+    }
+    @include min-width(md) {
+
+      height: 140px;
+    }
+  }
+  &__wrap{
+    padding-top:92px;
+    padding-bottom: 92px;
+    @include min-width(md){
+      padding-top: 185px;
+      padding-bottom: 190px;
+    }
+  }
+  &__title{
+    color: #FFFFFF;
+  }
+  &__subtitle{
+    padding-top: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.15;
+    text-align: center;
+    color: #FFFFFF;
+    @include min-width(md){
+      font-size: 20px;
+    }
+  }
+  &__list{
+    padding-top: 32px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    @include min-width(sm){
+      padding-top: 80px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__img{
+    height: 48px;    //по сути это font-size
+    object-fit: contain;
+    @include min-width(md){
+      height: 60px;
+    }
+  }
+  &__text{
+    padding-top: 20px;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 1.25;
+    text-align: center;
+    color: #FFFFFF;
+    @include min-width(md){
+      padding-top: 30px;
+      font-size: 16px;
+    }
+  }
+}

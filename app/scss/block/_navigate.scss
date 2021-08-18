@@ -1,7 +1,8 @@
 .navigate {
+  position: relative;
   margin-bottom: 32px;
   z-index: 5;
-  @include min-width(md){
+  @include min-width(sm){
     margin-bottom: 80px;
   }
 
@@ -13,7 +14,7 @@
     background: #FFFFFF;
     box-shadow: 0 20px 80px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
-    @include min-width(md) {
+    @include min-width(sm) {
       max-width: initial;
       flex-direction: row;
     }
@@ -28,7 +29,7 @@
       border-top: 2px solid #F3F3F3;
     }
 
-    @include min-width(md) {
+    @include min-width(sm) {
       border-right: 2px solid #F3F3F3;
       border-top: initial;
       &:last-child {
@@ -43,7 +44,7 @@
     line-height: 1.5em;
     text-align: center;
     color: #000000;
-    @include min-width(md) {
+    @include min-width(sm) {
       padding: 58px 50px 32px 50px;
       font-size: 16px;
     }
@@ -65,11 +66,21 @@
     box-shadow: 0 10px 20px rgba(78, 170, 224, 0.35);
     border-radius: 40px;
     cursor: pointer;
-    @include min-width(md) {
+    @include min-width(sm) {
       margin-bottom: 58px;
       padding: 28px 0;
       width: 354px;
       font-size: 20px;
+    }
+
+    &:hover{
+      box-shadow: 0 20px 30px rgba(78, 170, 224, 0.6);
+      text-shadow:  0 0 0;
+      transition: box-shadow 0.5s ease-out;
+    }
+    &:active{
+      box-shadow:0 0 0;
+      transition: box-shadow 0.5s ease-out;
     }
 
     &--green {
@@ -79,7 +90,7 @@
 
   &__img {
     padding-left: 10px;
-    @include min-width(md) {
+    @include min-width(sm) {
       padding-left: 20px;
     }
   }

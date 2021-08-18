@@ -1,0 +1,61 @@
+.payout {
+  margin-bottom: 32px;
+  @include min-width(dm){
+    margin-bottom: 80px;
+  }
+  &__title {
+    &--color {
+      color: #2E9ADB;
+    }
+  }
+
+  &__subtitle {
+    padding-top: 10px;
+    padding-bottom: 32px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.2;
+    text-align: center;
+    color: #939393;
+    @include min-width(md) {
+      padding-top: 20px;
+      padding-bottom: 80px;
+      font-size: 20px;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+   }
+
+  &__item{
+    display: flex;
+    flex-direction: column;
+    @include min-width(sm){
+      flex-direction: row;
+    }
+    &--center{
+      margin: 15px;
+      @include min-width(md){
+        margin: 0;
+      }
+    }
+  }
+  &__img{
+    margin-top:15px;
+    width: 109px;
+    @include min-width(md){
+      margin: 15px;
+      width: 160px;
+    }
+    &--small{
+      width: 39px;
+      @include min-width(md){
+        width: 60px;
+      }
+    }
+      }
+}
