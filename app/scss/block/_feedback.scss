@@ -1,0 +1,112 @@
+.feedback {
+  margin: 15px 0;
+  padding: 80px 0;
+  position: relative;
+  align-items: center;
+  background-image: url("/img/feedback/feedback_back.jpg");
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include min-width(sm){
+    padding: 200px 0;
+  }
+  &:before{
+    content: "";
+    position: absolute;
+    height: 80px;
+    top: -5px;
+    right: 0;
+    left: 0;
+    background-image: url("/img/feedback/feedback_up.png");
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include min-width(sm){
+      height: 180px;
+    }
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    height: 80px;
+    right: 0;
+    bottom: -5px;
+    left: 0;
+    background-image: url("/img/feedback/feedback_down.png");
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include min-width(sm){
+      height: 180px;
+    }
+  }
+
+  &__wrap{
+    text-align: center;
+  }
+  &__title {
+    color: #FFFFFF;
+  }
+  &__form {
+    margin: 0 auto;
+    padding-top: 20px;
+    max-width: 730px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    @include min-width(md) {
+      padding-top: 40px;
+      gap: 20px;
+    }
+  }
+  &__input {
+    width: 100%;
+    padding: 28px 30px;
+    height: 60px;
+    background: #FFFFFF;
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.15;
+
+    &::placeholder {
+      color: rgba(126, 126, 126, 0.5);
+    }
+
+    @include min-width(md) {
+      padding: 20px 22px;
+
+      font-size: 20px;
+    }
+  }
+  &__button {
+    margin: 20px 0;
+    width: 288px;
+    height: 60px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 40px;
+    cursor: pointer;
+    z-index: 5;
+    @include min-width(md) {
+      margin: 40px 0;
+      width: 350px;
+      height: 80px;
+      font-size: 20px;
+    }
+
+    &:hover {
+      box-shadow: 0 20px 30px rgba(78, 170, 224, 0.35);
+      text-shadow: 0 0 0;
+      transition: box-shadow 0.5s ease-out;
+    }
+
+    &:active {
+      box-shadow: 0 0 0;
+      transition: box-shadow 0.5s ease-out;
+    }
+  }
+}

@@ -1,0 +1,101 @@
+.tile {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  @include min-width(md) {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  &__list {
+    padding-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    @include min-width(md) {
+      padding-top: 32px;
+      gap: 30px
+    }
+  }
+
+  &__item {
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url("/img/tile/back.jpg");
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    z-index: 1;
+    @include min-width(md) {
+      justify-content: start;
+
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      height: 44px;
+      right: -1px;
+      bottom: -1px;
+      left: -1px;
+      background-image: url("/img/tile/down.svg");
+      background-position: center top;
+      background-size: cover;
+      background-repeat: no-repeat;
+      @include min-width(md) {
+        height: 44px;
+      }
+    }
+  }
+
+  &__img {
+    position: relative;
+    margin: 42px 0 74px;
+    width: 80px;
+    z-index: 10;
+    @include min-width(md) {
+      margin: 40px 0 84px 40px;
+      width: 100px;
+    }
+  }
+
+  &__text {
+    padding: 0 16px 16px 16px;
+    @include min-width(md) {
+      padding: 0 40px 40px 40px;
+    }
+  }
+  &__subtitle{
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 1.25;
+    text-align: center;
+    color: #000000;
+    @include min-width(md) {
+      text-align: left;
+      font-size: 20px;
+    }
+  }
+
+  &__sentence{
+    padding-top: 10px;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 1.15;
+    text-align: center;
+    color: #000000;
+    @include min-width(md) {
+      text-align: left;
+      font-size: 14px;
+    }
+
+  }
+
+}

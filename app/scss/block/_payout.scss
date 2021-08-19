@@ -1,6 +1,6 @@
 .payout {
   margin-bottom: 32px;
-  @include min-width(dm){
+  @include min-width(md){
     margin-bottom: 80px;
   }
   &__title {
