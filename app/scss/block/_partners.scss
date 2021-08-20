@@ -1,26 +1,28 @@
-.partners{
-  &__list{
+.partners {
+  &__list {
     padding-top: 18px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    @include min-width(md){
+    @include min-width(md) {
       padding-top: 50px;
     }
   }
-  &__picture{
+
+  &__picture {
     padding: 15px 8px;
-    @include min-width(md){
+    @include min-width(md) {
       padding: 30px 25px;
     }
   }
-  &__text{
+
+  &__text {
     padding-top: 18px;
     font-size: 13px;
     line-height: 1.15;
     text-align: center;
     color: #939393;
-    @include min-width(md){
+    @include min-width(md) {
       padding-top: 50px;
       font-size: 20px
     }

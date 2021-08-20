@@ -18,12 +18,11 @@
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
-    @include min-width(md){
+    @include min-width(md) {
       background-image: url("/img/titular/titular_down.svg");
       bottom: -80px;
     }
   }
-
 
   &__title {
     padding-top: 32px;
@@ -49,6 +48,5 @@
     @include min-width(md) {
       font-size: 20px;
     }
-
   }
 }

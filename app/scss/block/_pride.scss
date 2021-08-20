@@ -11,12 +11,13 @@
   }
 
   &__block {
-    &:nth-child(-n+2){
+    &:nth-child(-n+2) {
       border-bottom: 2px solid rgba(255, 255, 255, 0.25);
-      @include min-width(md){
-        border-bottom: 2px solid rgba(0, 0, 0, 0);      //прозрачная для однообразия
+      @include min-width(md) {
+        border-bottom: 2px solid rgba(0, 0, 0, 0); //прозрачная для однообразия
       }
     }
+
     &:nth-child(odd) {
       border-right: 2px solid rgba(255, 255, 255, 0.25);
     }
@@ -24,7 +25,7 @@
     @include min-width(md) {
       border-right: 2px solid rgba(255, 255, 255, 0.25);
       &:last-child {
-        border-right: 2px solid rgba(0, 0, 0, 0);     //прозрачная для того чтобы совпадали линия с PRIDE c линией NAVIGATE
+        border-right: 2px solid rgba(0, 0, 0, 0); //прозрачная для того чтобы совпадали линия с PRIDE c линией NAVIGATE
       }
     }
   }
@@ -40,7 +41,6 @@
       padding-top: 30px;
       font-size: 40px;
     }
-
   }
 
   &__tagline {
@@ -54,6 +54,5 @@
       padding-bottom: 50px;
       font-size: 16px;
     }
-
   }
 }

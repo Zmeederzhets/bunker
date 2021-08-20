@@ -2,13 +2,13 @@
   position: relative;
   margin-bottom: 32px;
   z-index: 5;
-  @include min-width(sm){
+  @include min-width(sm) {
     margin-bottom: 80px;
   }
 
   &__wrap {
     margin: 0 auto;
-    max-width: 288px ;
+    max-width: 288px;
     display: flex;
     flex-direction: column;
     background: #FFFFFF;
@@ -25,6 +25,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     &:last-child {
       border-top: 2px solid #F3F3F3;
     }
@@ -73,13 +74,14 @@
       font-size: 20px;
     }
 
-    &:hover{
+    &:hover {
       box-shadow: 0 20px 30px rgba(78, 170, 224, 0.6);
-      text-shadow:  0 0 0;
+      text-shadow: 0 0 0;
       transition: box-shadow 0.5s ease-out;
     }
-    &:active{
-      box-shadow:0 0 0;
+
+    &:active {
+      box-shadow: 0 0 0;
       transition: box-shadow 0.5s ease-out;
     }
 
